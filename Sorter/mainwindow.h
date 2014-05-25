@@ -23,8 +23,11 @@ private slots:
 
     void on_actionO_algorytmach_triggered();
 
+    void on_actionOtworz_triggered();
+
 private:
     Ui::MainWindow *ui;
+    QString fileName;
 };
 
 #endif // MAINWINDOW_H
