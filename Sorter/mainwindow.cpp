@@ -20,10 +20,10 @@ void MainWindow::on_actionZamknij_triggered()
 
 void MainWindow::on_actionO_autorach_triggered()
 {
-    QMessageBox::about(this,"Autorzy","Piotr Banach - młody, przystojny, inteligentny.\nDaniel Rynca - 23885002371");
+    QMessageBox::about(this,"Autorzy","<b>Piotr Banach</b><br>Młody, przystojny, inteligentny.<br><br><b>Daniel Rynca</b><br>23885002371");
 }
 
 void MainWindow::on_actionO_algorytmach_triggered()
 {
-    QMessageBox::information(this,"Algorytmy","Sortowanie szybkie (ang. quicksort)\n\njeden z popularnych algorytmów sortowania\ndziałających na zasadzie \"dziel i zwyciężaj\".\nSortowanie QuickSort zostało wynalezione w 1962 \nprzez C.A.R. Hoare'a.\n\nSortowanie bąbelkowe (ang. bubble sort)\n\nprosta metoda sortowania polegająca na porównywaniu dwóch kolejnych elementów i zamianie ich kolejności,\n jeżeli zaburza ona porządek, \nw jakim się sortuje tablicę. \nSortowanie kończy się, gdy podczas kolejnego przejścia nie dokonano żadnej zmiany.");
+    QMessageBox::information(this,"Algorytmy","<b>Sortowanie szybkie (ang. quicksort)</b><br><br>Jeden z popularnych algorytmów sortowania<br>działających na zasadzie \"dziel i zwyciężaj\".<br>Sortowanie QuickSort zostało wynalezione w 1962 <br>przez C.A.R. Hoare'a.<br><br><b>Sortowanie bąbelkowe (ang. bubble sort)</b><br><br>Prosta metoda sortowania polegająca na porównywaniu dwóch kolejnych elementów i zamianie ich kolejności,<br>jeżeli zaburza ona porządek, w jakim się sortuje tablicę. <br>Sortowanie kończy się, gdy podczas kolejnego przejścia nie dokonano żadnej zmiany.<br><br><b>Sortowanie Shella (ang. Shellsort)</b><br><br>Algorytm sortowania działający w miejscu i korzystający <br>z porównań elementów. Stanowi uogólnienie sortowania przez wstawianie, dopuszczające porównania i zamiany elementów położonych daleko od siebie. Jego pierwszą wersję opublikował w 1959 roku Donald Shell.");
 }
