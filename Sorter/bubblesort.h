@@ -7,7 +7,7 @@ class BubbleSort: public sorting
 {
 public:
     BubbleSort();
-    QString Sort();
+    QList<double> Sort();
 };
 
 #endif // BUBBLESORT_H

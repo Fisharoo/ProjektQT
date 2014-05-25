@@ -3,6 +3,9 @@
 #include <QFileDialog>
 #include <QFile>
 #include <QTextStream>
+#include <QDebug>
+#include <QList>
+#include <QElapsedTimer>
 
 
 MainWindow::MainWindow(QWidget *parent) :
@@ -59,7 +62,12 @@ void MainWindow::on_buttonQuick_clicked()
 void MainWindow::on_buttonBubble_clicked()
 {
     QString wynik;
+    QList<double> temp;
     bubble.setSequence(ui->toSort->toPlainText());
-    wynik = bubble.Sort();
+    QElapsedTimer timer;
+        timer.start();
+    temp = bubble.Sort();
+        qDebug() << timer.elapsed();
+    wynik = bubble.listToString(temp);
     ui->Sorted->setPlainText(wynik);
 }

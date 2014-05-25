@@ -28,6 +28,14 @@ QList<double> sorting::createList(QString input){
 return sequence;
 }
 
+QString sorting::listToString(QList<double> lista){
+    QString sorted;
+    for ( int j = 0 ; j < lista.count() ; j++){
+        sorted += QString::number(lista[j]) + "\n";
+    }
+    return sorted;
+
+}
 void sorting::setSequence(QString input){
     seqList = createList(input);
 }

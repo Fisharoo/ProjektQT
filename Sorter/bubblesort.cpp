@@ -7,12 +7,9 @@ BubbleSort::BubbleSort()
 {
 }
 
-QString BubbleSort::Sort(){
+QList<double> BubbleSort::Sort(){
     QList<double> lista = getSequence();
 
-
-    QElapsedTimer timer;
-        timer.start();
 
         double temp;
         int pmin = 0;
@@ -33,12 +30,7 @@ QString BubbleSort::Sort(){
             if(pmin) pmin--;
             pmax = p;
           } while(p >= 0);
-         qDebug() << timer.elapsed();
 
-        QString sorted;
-        for ( int j = 0 ; j < lista.count() ; j++){
-            sorted += QString::number(lista[j]) + "\n";
-        }
 
-        return sorted;
+        return lista;
 }

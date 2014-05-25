@@ -10,6 +10,7 @@ public:
     sorting();
     void setSequence(QString input);
     QList<double> getSequence();
+    QString listToString(QList<double> lista);
 private:
     QList<double> seqList;
     QList<double> createList(QString input);
