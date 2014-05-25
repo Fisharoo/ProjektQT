@@ -7,9 +7,10 @@ class QuickSort: public sorting
 {
 public:
     QuickSort();
-    void Sort();
+    QList<double> Sort();
 private:
     void sortIt(int left, int right);
+    QList<double> curList;
 };
 
 #endif // QUICKSORT_H

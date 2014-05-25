@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>764</width>
-    <height>525</height>
+    <width>797</width>
+    <height>533</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -55,20 +55,39 @@
         <property name="title">
          <string>QuickSort</string>
         </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
         <layout class="QGridLayout" name="gridLayout">
-         <item row="1" column="0">
+         <item row="0" column="0">
+          <widget class="QLCDNumber" name="quickLCD">
+           <property name="digitCount">
+            <number>12</number>
+           </property>
+          </widget>
+         </item>
+         <item row="2" column="0">
           <widget class="QPushButton" name="buttonQuick">
            <property name="text">
             <string>Rozpocznij</string>
            </property>
           </widget>
          </item>
-         <item row="0" column="0">
-          <widget class="QLabel" name="label_4">
-           <property name="text">
-            <string>TextLabel</string>
+         <item row="1" column="0">
+          <spacer name="verticalSpacer">
+           <property name="orientation">
+            <enum>Qt::Vertical</enum>
            </property>
-          </widget>
+           <property name="sizeType">
+            <enum>QSizePolicy::Minimum</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>0</width>
+             <height>0</height>
+            </size>
+           </property>
+          </spacer>
          </item>
         </layout>
        </widget>
@@ -78,8 +97,18 @@
         <property name="title">
          <string>Bąbelkowe</string>
         </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
         <layout class="QGridLayout" name="gridLayout_2">
          <item row="1" column="0">
+          <widget class="QLCDNumber" name="bubbleLCD">
+           <property name="digitCount">
+            <number>12</number>
+           </property>
+          </widget>
+         </item>
+         <item row="2" column="0">
           <widget class="QPushButton" name="buttonBubble">
            <property name="text">
             <string>Rozpocznij</string>
@@ -87,11 +116,20 @@
           </widget>
          </item>
          <item row="0" column="0">
-          <widget class="QLabel" name="label_5">
-           <property name="text">
-            <string>TextLabel</string>
+          <spacer name="verticalSpacer_2">
+           <property name="orientation">
+            <enum>Qt::Vertical</enum>
            </property>
-          </widget>
+           <property name="sizeType">
+            <enum>QSizePolicy::Minimum</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>0</width>
+             <height>0</height>
+            </size>
+           </property>
+          </spacer>
          </item>
         </layout>
        </widget>
@@ -101,8 +139,24 @@
         <property name="title">
          <string>Shell</string>
         </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
         <layout class="QGridLayout" name="gridLayout_3">
          <item row="1" column="0">
+          <widget class="QLCDNumber" name="shellLCD">
+           <property name="frameShadow">
+            <enum>QFrame::Raised</enum>
+           </property>
+           <property name="lineWidth">
+            <number>1</number>
+           </property>
+           <property name="digitCount">
+            <number>12</number>
+           </property>
+          </widget>
+         </item>
+         <item row="2" column="0">
           <widget class="QPushButton" name="buttonShell">
            <property name="text">
             <string>Rozpocznij</string>
@@ -110,33 +164,20 @@
           </widget>
          </item>
          <item row="0" column="0">
-          <widget class="QTimeEdit" name="timeShell">
-           <property name="frame">
-            <bool>true</bool>
+          <spacer name="verticalSpacer_3">
+           <property name="orientation">
+            <enum>Qt::Vertical</enum>
            </property>
-           <property name="readOnly">
-            <bool>true</bool>
+           <property name="sizeType">
+            <enum>QSizePolicy::Minimum</enum>
            </property>
-           <property name="buttonSymbols">
-            <enum>QAbstractSpinBox::NoButtons</enum>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>0</width>
+             <height>0</height>
+            </size>
            </property>
-           <property name="keyboardTracking">
-            <bool>false</bool>
-           </property>
-           <property name="maximumTime">
-            <time>
-             <hour>23</hour>
-             <minute>59</minute>
-             <second>9</second>
-            </time>
-           </property>
-           <property name="currentSection">
-            <enum>QDateTimeEdit::MSecSection</enum>
-           </property>
-           <property name="displayFormat">
-            <string>mm:ss:zzz</string>
-           </property>
-          </widget>
+          </spacer>
          </item>
         </layout>
        </widget>
@@ -150,7 +191,7 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>764</width>
+     <width>797</width>
      <height>26</height>
     </rect>
    </property>

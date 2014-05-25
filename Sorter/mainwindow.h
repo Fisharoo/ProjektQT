@@ -34,7 +34,6 @@ private slots:
 
     void on_buttonShell_clicked();
 
-    void on_buttonShell_clicked();
 
 private:
     Ui::MainWindow *ui;
@@ -42,8 +41,7 @@ private:
     QuickSort quick;
     BubbleSort bubble;
     ShellSort shell;
-
-    QString timerCount(QTimer timer);
+    QString getTime(int);
 };
 
 #endif // MAINWINDOW_H

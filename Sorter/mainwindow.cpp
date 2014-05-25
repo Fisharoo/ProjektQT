@@ -6,6 +6,8 @@
 #include <QDebug>
 #include <QList>
 #include <QTime>
+#include <QString>
+#include <QStringBuilder>
 
 
 MainWindow::MainWindow(QWidget *parent) :
@@ -53,49 +55,51 @@ void MainWindow::on_actionOtworz_triggered()
         file.close();
 }
 
+QString MainWindow::getTime(int ms){
+    int h,m,s;
+    s = ms/1000;
+    m = (s/60)%60;
+    h = (s/3600);
+    s = s % 60;
+    ms = ms % 1000;
+    QString time = QString("%1:%2:%3.%4")
+            .arg(h,2,10,QLatin1Char('0'))
+            .arg(m,2,10,QLatin1Char('0'))
+            .arg(s,2,10,QLatin1Char('0'))
+            .arg(ms,3,10,QLatin1Char('0'));
+    return time;
+}
+
 void MainWindow::on_buttonQuick_clicked()
 {
+    QList<double> temp;
     quick.setSequence(ui->toSort->toPlainText());
-    quick.Sort();
+    QTime timer;
+    timer.start();
+    temp = quick.Sort();
+    ui->Sorted->setPlainText(quick.listToString(temp));
+    ui->quickLCD->display(getTime(timer.elapsed()));
 }
 
 void MainWindow::on_buttonBubble_clicked()
 {
-    QString wynik;
-    QList<double> temp;QTime timer;
-    timer.start();
+    QList<double> temp;
     bubble.setSequence(ui->toSort->toPlainText());
-
+    QTime timer;
+    timer.start();
     temp = bubble.Sort();
-
-    wynik = bubble.listToString(temp);
-    ui->timeShell->setTime(timer.));
-    ui->Sorted->setPlainText(wynik);
-    qDebug() << timer.elapsed();
+    ui->Sorted->setPlainText(bubble.listToString(temp));
+    ui->bubbleLCD->display(getTime(timer.elapsed()));
 }
 
 void MainWindow::on_buttonShell_clicked()
 {
-    QString wynik;
     QList<double> temp;
     shell.setSequence(ui->toSort->toPlainText());
-    QElapsedTimer timer;
-        timer.start();
+    QTime timer;
+    timer.start();
     temp = shell.Sort();
-        qDebug() << timer.elapsed();
-    wynik = shell.listToString(temp);
-    ui->Sorted->setPlainText(wynik);
+    ui->Sorted->setPlainText(shell.listToString(temp));
+    ui->shellLCD->display(getTime(timer.elapsed()));
 }
 
-void MainWindow::on_buttonShell_clicked()
-{
-    QString wynik;
-    QList<double> temp;
-    shell.setSequence(ui->toSort->toPlainText());
-    QElapsedTimer timer;
-        timer.start();
-    temp = shell.Sort();
-        qDebug() << timer.elapsed();
-    wynik = shell.listToString(temp);
-    ui->Sorted->setPlainText(wynik);
-}
