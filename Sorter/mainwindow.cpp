@@ -4,6 +4,7 @@
 #include <QFile>
 #include <QTextStream>
 
+
 MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
     ui(new Ui::MainWindow)
@@ -34,7 +35,7 @@ void MainWindow::on_actionO_algorytmach_triggered()
 void MainWindow::on_actionOtworz_triggered()
 {
     fileName = QFileDialog::getOpenFileName(this,
-        tr("Wybierz plik do posortowania"), "/home", tr("Plik tekstowy (*.txt)"));
+        tr("Wybierz plik do posortowania"), "d:/", tr("Plik tekstowy (*.txt)"));
 
     QFile file(fileName);
         if (!file.open(QIODevice::ReadOnly | QIODevice::Text))
@@ -47,4 +48,9 @@ void MainWindow::on_actionOtworz_triggered()
         }
 
         file.close();
+}
+
+void MainWindow::on_buttonQuick_clicked()
+{
+    chuj.getSequence();
 }

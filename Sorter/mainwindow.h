@@ -3,6 +3,7 @@
 
 #include <QMainWindow>
 #include <QMessageBox>
+#include <quicksort.h>
 
 namespace Ui {
 class MainWindow;
@@ -25,9 +26,12 @@ private slots:
 
     void on_actionOtworz_triggered();
 
+    void on_buttonQuick_clicked();
+
 private:
     Ui::MainWindow *ui;
     QString fileName;
+    QuickSort chuj;
 };
 
 #endif // MAINWINDOW_H
