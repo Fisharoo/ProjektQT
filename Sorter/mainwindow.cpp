@@ -55,3 +55,11 @@ void MainWindow::on_buttonQuick_clicked()
     chuj.setSequence(ui->toSort->toPlainText());
     chuj.Sort();
 }
+
+void MainWindow::on_buttonBubble_clicked()
+{
+    QString wynik;
+    bubble.setSequence(ui->toSort->toPlainText());
+    wynik = bubble.Sort();
+    ui->Sorted->setPlainText(wynik);
+}

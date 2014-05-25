@@ -7,7 +7,7 @@ class BubbleSort: public sorting
 {
 public:
     BubbleSort();
-    void Sort();
+    QString Sort();
 };
 
 #endif // BUBBLESORT_H
