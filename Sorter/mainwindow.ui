@@ -56,32 +56,17 @@
          <string>QuickSort</string>
         </property>
         <layout class="QGridLayout" name="gridLayout">
-         <item row="0" column="0">
-          <widget class="QTimeEdit" name="timeQuick">
-           <property name="frame">
-            <bool>true</bool>
-           </property>
-           <property name="readOnly">
-            <bool>true</bool>
-           </property>
-           <property name="buttonSymbols">
-            <enum>QAbstractSpinBox::NoButtons</enum>
-           </property>
-           <property name="keyboardTracking">
-            <bool>false</bool>
-           </property>
-           <property name="currentSection">
-            <enum>QDateTimeEdit::MinuteSection</enum>
-           </property>
-           <property name="displayFormat">
-            <string>mm:ss:ms</string>
-           </property>
-          </widget>
-         </item>
          <item row="1" column="0">
           <widget class="QPushButton" name="buttonQuick">
            <property name="text">
             <string>Rozpocznij</string>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="0">
+          <widget class="QLabel" name="label_4">
+           <property name="text">
+            <string>TextLabel</string>
            </property>
           </widget>
          </item>
@@ -94,32 +79,17 @@
          <string>Bąbelkowe</string>
         </property>
         <layout class="QGridLayout" name="gridLayout_2">
-         <item row="0" column="0">
-          <widget class="QTimeEdit" name="timeBubble">
-           <property name="frame">
-            <bool>true</bool>
-           </property>
-           <property name="readOnly">
-            <bool>true</bool>
-           </property>
-           <property name="buttonSymbols">
-            <enum>QAbstractSpinBox::NoButtons</enum>
-           </property>
-           <property name="keyboardTracking">
-            <bool>false</bool>
-           </property>
-           <property name="currentSection">
-            <enum>QDateTimeEdit::MinuteSection</enum>
-           </property>
-           <property name="displayFormat">
-            <string>mm:ss:ms</string>
-           </property>
-          </widget>
-         </item>
          <item row="1" column="0">
           <widget class="QPushButton" name="buttonBubble">
            <property name="text">
             <string>Rozpocznij</string>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="0">
+          <widget class="QLabel" name="label_5">
+           <property name="text">
+            <string>TextLabel</string>
            </property>
           </widget>
          </item>
@@ -132,6 +102,13 @@
          <string>Shell</string>
         </property>
         <layout class="QGridLayout" name="gridLayout_3">
+         <item row="1" column="0">
+          <widget class="QPushButton" name="buttonShell">
+           <property name="text">
+            <string>Rozpocznij</string>
+           </property>
+          </widget>
+         </item>
          <item row="0" column="0">
           <widget class="QTimeEdit" name="timeShell">
            <property name="frame">
@@ -146,18 +123,18 @@
            <property name="keyboardTracking">
             <bool>false</bool>
            </property>
+           <property name="maximumTime">
+            <time>
+             <hour>23</hour>
+             <minute>59</minute>
+             <second>9</second>
+            </time>
+           </property>
            <property name="currentSection">
-            <enum>QDateTimeEdit::MinuteSection</enum>
+            <enum>QDateTimeEdit::MSecSection</enum>
            </property>
            <property name="displayFormat">
-            <string>mm:ss:ms</string>
-           </property>
-          </widget>
-         </item>
-         <item row="1" column="0">
-          <widget class="QPushButton" name="buttonShell">
-           <property name="text">
-            <string>Rozpocznij</string>
+            <string>mm:ss:zzz</string>
            </property>
           </widget>
          </item>

@@ -5,7 +5,7 @@
 #include <QTextStream>
 #include <QDebug>
 #include <QList>
-#include <QElapsedTimer>
+#include <QTime>
 
 
 MainWindow::MainWindow(QWidget *parent) :
@@ -55,20 +55,35 @@ void MainWindow::on_actionOtworz_triggered()
 
 void MainWindow::on_buttonQuick_clicked()
 {
-    chuj.setSequence(ui->toSort->toPlainText());
-    chuj.Sort();
+    quick.setSequence(ui->toSort->toPlainText());
+    quick.Sort();
 }
 
 void MainWindow::on_buttonBubble_clicked()
 {
     QString wynik;
-    QList<double> temp;
+    QList<double> temp;QTime timer;
+    timer.start();
     bubble.setSequence(ui->toSort->toPlainText());
+
+    temp = bubble.Sort();
+
+    wynik = bubble.listToString(temp);
+    ui->timeShell->setTime(timer.));
+    ui->Sorted->setPlainText(wynik);
+    qDebug() << timer.elapsed();
+}
+
+void MainWindow::on_buttonShell_clicked()
+{
+    QString wynik;
+    QList<double> temp;
+    shell.setSequence(ui->toSort->toPlainText());
     QElapsedTimer timer;
         timer.start();
-    temp = bubble.Sort();
+    temp = shell.Sort();
         qDebug() << timer.elapsed();
-    wynik = bubble.listToString(temp);
+    wynik = shell.listToString(temp);
     ui->Sorted->setPlainText(wynik);
 }
 
