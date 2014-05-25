@@ -34,7 +34,18 @@ void MainWindow::on_actionO_autorach_triggered()
 
 void MainWindow::on_actionO_algorytmach_triggered()
 {
-    QMessageBox::information(this,"Algorytmy","<b>Sortowanie szybkie (ang. quicksort)</b><br><br>Jeden z popularnych algorytmów sortowania<br>działających na zasadzie \"dziel i zwyciężaj\".<br>Sortowanie QuickSort zostało wynalezione w 1962 <br>przez C.A.R. Hoare'a.<br><br><b>Sortowanie bąbelkowe (ang. bubble sort)</b><br><br>Prosta metoda sortowania polegająca na porównywaniu dwóch kolejnych elementów i zamianie ich kolejności,<br>jeżeli zaburza ona porządek, w jakim się sortuje tablicę. <br>Sortowanie kończy się, gdy podczas kolejnego przejścia nie dokonano żadnej zmiany.<br><br><b>Sortowanie Shella (ang. Shellsort)</b><br><br>Algorytm sortowania działający w miejscu i korzystający <br>z porównań elementów. Stanowi uogólnienie sortowania przez wstawianie, dopuszczające porównania i zamiany elementów położonych daleko od siebie. Jego pierwszą wersję opublikował w 1959 roku Donald Shell.");
+    QMessageBox::information(this,"Algorytmy","<a href='https://www.youtube.com/watch?v=ywWBy6J5gz8'><b>Sortowanie szybkie (ang. quicksort)</b></a><br><br>"
+                             "Jeden z popularnych algorytmów sortowania<br>działających na zasadzie \"dziel i zwyciężaj\".<br>"
+                             "Sortowanie QuickSort zostało wynalezione w 1962 <br>przez C.A.R. Hoare'a.<br><br>"
+                             "<a href='https://www.youtube.com/watch?v=lyZQPjUT5B4'><b>Sortowanie bąbelkowe (ang. bubble sort)</b></a><br><br>"
+                             "Prosta metoda sortowania polegająca na porównywaniu dwóch kolejnych elementów i zamianie ich kolejności,<br>"
+                             "jeżeli zaburza ona porządek, w jakim się sortuje tablicę. <br>"
+                             "Sortowanie kończy się, gdy podczas kolejnego przejścia nie dokonano żadnej zmiany.<br><br>"
+                             "<a href='https://www.youtube.com/watch?v=CmPA7zE8mx0'><b>Sortowanie Shella (ang. Shellsort)</b></a><br><br>"
+                             "Algorytm sortowania działający w miejscu i korzystający <br>"
+                             "z porównań elementów. Stanowi uogólnienie sortowania przez "
+                             "wstawianie, dopuszczające porównania i zamiany elementów "
+                             "położonych daleko od siebie. Jego pierwszą wersję opublikował w 1959 roku Donald Shell.");
 }
 
 void MainWindow::on_actionOtworz_triggered()
