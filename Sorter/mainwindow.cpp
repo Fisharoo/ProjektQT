@@ -52,5 +52,6 @@ void MainWindow::on_actionOtworz_triggered()
 
 void MainWindow::on_buttonQuick_clicked()
 {
-    chuj.getSequence();
+    chuj.setSequence(ui->toSort->toPlainText());
+    chuj.Sort();
 }

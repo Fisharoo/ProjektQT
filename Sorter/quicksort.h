@@ -7,6 +7,7 @@ class QuickSort: public sorting
 {
 public:
     QuickSort();
+    void Sort();
 };
 
 #endif // QUICKSORT_H

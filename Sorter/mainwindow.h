@@ -4,6 +4,8 @@
 #include <QMainWindow>
 #include <QMessageBox>
 #include <quicksort.h>
+#include <bubblesort.h>
+#include <shellsort.h>
 
 namespace Ui {
 class MainWindow;

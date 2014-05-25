@@ -7,6 +7,7 @@ class ShellSort: public sorting
 {
 public:
     ShellSort();
+    void Sort();
 };
 
 #endif // SHELLSORT_H

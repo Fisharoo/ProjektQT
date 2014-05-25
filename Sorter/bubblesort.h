@@ -7,6 +7,7 @@ class BubbleSort: public sorting
 {
 public:
     BubbleSort();
+    void Sort();
 };
 
 #endif // BUBBLESORT_H
