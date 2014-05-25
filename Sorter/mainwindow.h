@@ -33,11 +33,14 @@ private slots:
     void on_buttonBubble_clicked();
 
 
+    void on_buttonShell_clicked();
+
 private:
     Ui::MainWindow *ui;
     QString fileName;
     QuickSort chuj;
     BubbleSort bubble;
+    ShellSort shell;
 
 };
 

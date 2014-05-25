@@ -10,7 +10,6 @@ BubbleSort::BubbleSort()
 QList<double> BubbleSort::Sort(){
     QList<double> lista = getSequence();
 
-
         double temp;
         int pmin = 0;
         int pmax = lista.count() - 1;

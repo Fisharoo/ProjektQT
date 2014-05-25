@@ -7,7 +7,7 @@ class ShellSort: public sorting
 {
 public:
     ShellSort();
-    void Sort();
+    QList<double> Sort();
 };
 
 #endif // SHELLSORT_H

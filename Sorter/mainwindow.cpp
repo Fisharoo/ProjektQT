@@ -71,3 +71,16 @@ void MainWindow::on_buttonBubble_clicked()
     wynik = bubble.listToString(temp);
     ui->Sorted->setPlainText(wynik);
 }
+
+void MainWindow::on_buttonShell_clicked()
+{
+    QString wynik;
+    QList<double> temp;
+    shell.setSequence(ui->toSort->toPlainText());
+    QElapsedTimer timer;
+        timer.start();
+    temp = shell.Sort();
+        qDebug() << timer.elapsed();
+    wynik = shell.listToString(temp);
+    ui->Sorted->setPlainText(wynik);
+}
