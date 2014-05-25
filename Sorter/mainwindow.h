@@ -32,16 +32,18 @@ private slots:
 
     void on_buttonBubble_clicked();
 
+    void on_buttonShell_clicked();
 
     void on_buttonShell_clicked();
 
 private:
     Ui::MainWindow *ui;
     QString fileName;
-    QuickSort chuj;
+    QuickSort quick;
     BubbleSort bubble;
     ShellSort shell;
 
+    QString timerCount(QTimer timer);
 };
 
 #endif // MAINWINDOW_H
