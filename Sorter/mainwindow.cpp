@@ -107,6 +107,7 @@ void MainWindow::on_buttonBubble_clicked()
         temp = bubble.Sort();
         ui->Sorted->setPlainText(bubble.listToString(temp));
         ui->bubbleLCD->display(getTime(timer.elapsed()));
+
     } else {
         QMessageBox::warning(this,"Błąd","Brak ciągu do sortowania!");
     }

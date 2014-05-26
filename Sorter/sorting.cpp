@@ -24,7 +24,9 @@ QList<double> sorting::createList(QString input){
             temp = "";
         }
     }
-
+    if(!temp.isEmpty()){
+                sequence << temp.toDouble();
+                temp = "";}
 return sequence;
 }
 

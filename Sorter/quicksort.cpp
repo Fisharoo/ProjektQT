@@ -7,7 +7,9 @@ QuickSort::QuickSort()
 
 QList<double> QuickSort::Sort(){
     curList = getSequence();
+    if ( curList.count() > 0 ){
     sortIt(0,curList.count()-1);
+    }
     return curList;
 }
 void QuickSort::sortIt(int left, int right){

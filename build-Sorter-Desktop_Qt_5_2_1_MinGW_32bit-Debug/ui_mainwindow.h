@@ -16,15 +16,16 @@
 #include <QtWidgets/QGridLayout>
 #include <QtWidgets/QGroupBox>
 #include <QtWidgets/QHeaderView>
+#include <QtWidgets/QLCDNumber>
 #include <QtWidgets/QLabel>
 #include <QtWidgets/QMainWindow>
 #include <QtWidgets/QMenu>
 #include <QtWidgets/QMenuBar>
 #include <QtWidgets/QPlainTextEdit>
 #include <QtWidgets/QPushButton>
+#include <QtWidgets/QSpacerItem>
 #include <QtWidgets/QStatusBar>
 #include <QtWidgets/QTextBrowser>
-#include <QtWidgets/QTimeEdit>
 #include <QtWidgets/QVBoxLayout>
 #include <QtWidgets/QWidget>
 
@@ -48,16 +49,19 @@ public:
     QVBoxLayout *verticalLayout;
     QGroupBox *groupBox;
     QGridLayout *gridLayout;
-    QTimeEdit *timeQuick;
+    QLCDNumber *quickLCD;
     QPushButton *buttonQuick;
+    QSpacerItem *verticalSpacer;
     QGroupBox *groupBox_2;
     QGridLayout *gridLayout_2;
-    QTimeEdit *timeBubble;
+    QLCDNumber *bubbleLCD;
     QPushButton *buttonBubble;
+    QSpacerItem *verticalSpacer_2;
     QGroupBox *groupBox_3;
     QGridLayout *gridLayout_3;
-    QTimeEdit *timeShell;
+    QLCDNumber *shellLCD;
     QPushButton *buttonShell;
+    QSpacerItem *verticalSpacer_3;
     QMenuBar *menuBar;
     QMenu *menu_Menu;
     QMenu *menuHelp;
@@ -67,7 +71,7 @@ public:
     {
         if (MainWindow->objectName().isEmpty())
             MainWindow->setObjectName(QStringLiteral("MainWindow"));
-        MainWindow->resize(764, 525);
+        MainWindow->resize(797, 533);
         actionOtworz = new QAction(MainWindow);
         actionOtworz->setObjectName(QStringLiteral("actionOtworz"));
         QIcon icon;
@@ -122,72 +126,79 @@ public:
         verticalLayout->setObjectName(QStringLiteral("verticalLayout"));
         groupBox = new QGroupBox(centralWidget);
         groupBox->setObjectName(QStringLiteral("groupBox"));
+        groupBox->setAlignment(Qt::AlignCenter);
         gridLayout = new QGridLayout(groupBox);
         gridLayout->setSpacing(6);
         gridLayout->setContentsMargins(11, 11, 11, 11);
         gridLayout->setObjectName(QStringLiteral("gridLayout"));
-        timeQuick = new QTimeEdit(groupBox);
-        timeQuick->setObjectName(QStringLiteral("timeQuick"));
-        timeQuick->setFrame(true);
-        timeQuick->setReadOnly(true);
-        timeQuick->setButtonSymbols(QAbstractSpinBox::NoButtons);
-        timeQuick->setKeyboardTracking(false);
-        timeQuick->setCurrentSection(QDateTimeEdit::MinuteSection);
+        quickLCD = new QLCDNumber(groupBox);
+        quickLCD->setObjectName(QStringLiteral("quickLCD"));
+        quickLCD->setSmallDecimalPoint(false);
+        quickLCD->setDigitCount(12);
+        quickLCD->setMode(QLCDNumber::Dec);
 
-        gridLayout->addWidget(timeQuick, 0, 0, 1, 1);
+        gridLayout->addWidget(quickLCD, 0, 0, 1, 1);
 
         buttonQuick = new QPushButton(groupBox);
         buttonQuick->setObjectName(QStringLiteral("buttonQuick"));
 
-        gridLayout->addWidget(buttonQuick, 1, 0, 1, 1);
+        gridLayout->addWidget(buttonQuick, 2, 0, 1, 1);
+
+        verticalSpacer = new QSpacerItem(0, 0, QSizePolicy::Minimum, QSizePolicy::Minimum);
+
+        gridLayout->addItem(verticalSpacer, 1, 0, 1, 1);
 
 
         verticalLayout->addWidget(groupBox);
 
         groupBox_2 = new QGroupBox(centralWidget);
         groupBox_2->setObjectName(QStringLiteral("groupBox_2"));
+        groupBox_2->setAlignment(Qt::AlignCenter);
         gridLayout_2 = new QGridLayout(groupBox_2);
         gridLayout_2->setSpacing(6);
         gridLayout_2->setContentsMargins(11, 11, 11, 11);
         gridLayout_2->setObjectName(QStringLiteral("gridLayout_2"));
-        timeBubble = new QTimeEdit(groupBox_2);
-        timeBubble->setObjectName(QStringLiteral("timeBubble"));
-        timeBubble->setFrame(true);
-        timeBubble->setReadOnly(true);
-        timeBubble->setButtonSymbols(QAbstractSpinBox::NoButtons);
-        timeBubble->setKeyboardTracking(false);
-        timeBubble->setCurrentSection(QDateTimeEdit::MinuteSection);
+        bubbleLCD = new QLCDNumber(groupBox_2);
+        bubbleLCD->setObjectName(QStringLiteral("bubbleLCD"));
+        bubbleLCD->setDigitCount(12);
 
-        gridLayout_2->addWidget(timeBubble, 0, 0, 1, 1);
+        gridLayout_2->addWidget(bubbleLCD, 1, 0, 1, 1);
 
         buttonBubble = new QPushButton(groupBox_2);
         buttonBubble->setObjectName(QStringLiteral("buttonBubble"));
 
-        gridLayout_2->addWidget(buttonBubble, 1, 0, 1, 1);
+        gridLayout_2->addWidget(buttonBubble, 2, 0, 1, 1);
+
+        verticalSpacer_2 = new QSpacerItem(0, 0, QSizePolicy::Minimum, QSizePolicy::Minimum);
+
+        gridLayout_2->addItem(verticalSpacer_2, 0, 0, 1, 1);
 
 
         verticalLayout->addWidget(groupBox_2);
 
         groupBox_3 = new QGroupBox(centralWidget);
         groupBox_3->setObjectName(QStringLiteral("groupBox_3"));
+        groupBox_3->setAlignment(Qt::AlignCenter);
         gridLayout_3 = new QGridLayout(groupBox_3);
         gridLayout_3->setSpacing(6);
         gridLayout_3->setContentsMargins(11, 11, 11, 11);
         gridLayout_3->setObjectName(QStringLiteral("gridLayout_3"));
-        timeShell = new QTimeEdit(groupBox_3);
-        timeShell->setObjectName(QStringLiteral("timeShell"));
-        timeShell->setFrame(true);
-        timeShell->setReadOnly(true);
-        timeShell->setButtonSymbols(QAbstractSpinBox::NoButtons);
-        timeShell->setKeyboardTracking(false);
-        timeShell->setCurrentSection(QDateTimeEdit::MinuteSection);
+        shellLCD = new QLCDNumber(groupBox_3);
+        shellLCD->setObjectName(QStringLiteral("shellLCD"));
+        shellLCD->setFrameShadow(QFrame::Raised);
+        shellLCD->setLineWidth(1);
+        shellLCD->setDigitCount(12);
 
-        gridLayout_3->addWidget(timeShell, 0, 0, 1, 1);
+        gridLayout_3->addWidget(shellLCD, 1, 0, 1, 1);
 
         buttonShell = new QPushButton(groupBox_3);
         buttonShell->setObjectName(QStringLiteral("buttonShell"));
 
-        gridLayout_3->addWidget(buttonShell, 1, 0, 1, 1);
+        gridLayout_3->addWidget(buttonShell, 2, 0, 1, 1);
+
+        verticalSpacer_3 = new QSpacerItem(0, 0, QSizePolicy::Minimum, QSizePolicy::Minimum);
+
+        gridLayout_3->addItem(verticalSpacer_3, 0, 0, 1, 1);
 
 
         verticalLayout->addWidget(groupBox_3);
@@ -198,7 +209,7 @@ public:
         MainWindow->setCentralWidget(centralWidget);
         menuBar = new QMenuBar(MainWindow);
         menuBar->setObjectName(QStringLiteral("menuBar"));
-        menuBar->setGeometry(QRect(0, 0, 764, 26));
+        menuBar->setGeometry(QRect(0, 0, 797, 26));
         menu_Menu = new QMenu(menuBar);
         menu_Menu->setObjectName(QStringLiteral("menu_Menu"));
         menuHelp = new QMenu(menuBar);
@@ -236,13 +247,10 @@ public:
         label_3->setText(QApplication::translate("MainWindow", "Opcje", 0));
         label->setText(QApplication::translate("MainWindow", "Ci\304\205g do sortowania", 0));
         groupBox->setTitle(QApplication::translate("MainWindow", "QuickSort", 0));
-        timeQuick->setDisplayFormat(QApplication::translate("MainWindow", "mm:ss:ms", 0));
         buttonQuick->setText(QApplication::translate("MainWindow", "Rozpocznij", 0));
         groupBox_2->setTitle(QApplication::translate("MainWindow", "B\304\205belkowe", 0));
-        timeBubble->setDisplayFormat(QApplication::translate("MainWindow", "mm:ss:ms", 0));
         buttonBubble->setText(QApplication::translate("MainWindow", "Rozpocznij", 0));
         groupBox_3->setTitle(QApplication::translate("MainWindow", "Shell", 0));
-        timeShell->setDisplayFormat(QApplication::translate("MainWindow", "mm:ss:ms", 0));
         buttonShell->setText(QApplication::translate("MainWindow", "Rozpocznij", 0));
         menu_Menu->setTitle(QApplication::translate("MainWindow", "&Menu", 0));
         menuHelp->setTitle(QApplication::translate("MainWindow", "&Pomoc", 0));
