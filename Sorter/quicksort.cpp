@@ -11,7 +11,8 @@ QList<double> QuickSort::Sort(){
     return curList;
 }
 void QuickSort::sortIt(int left, int right){
-    int i,j,pivot;
+    int i,j;
+    double pivot;
     i = (left + right) / 2;
     pivot = curList[i];
     curList[i] = curList[right];

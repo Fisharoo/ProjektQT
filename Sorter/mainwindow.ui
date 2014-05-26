@@ -61,8 +61,14 @@
         <layout class="QGridLayout" name="gridLayout">
          <item row="0" column="0">
           <widget class="QLCDNumber" name="quickLCD">
+           <property name="smallDecimalPoint">
+            <bool>false</bool>
+           </property>
            <property name="digitCount">
             <number>12</number>
+           </property>
+           <property name="mode">
+            <enum>QLCDNumber::Dec</enum>
            </property>
           </widget>
          </item>

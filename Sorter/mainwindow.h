@@ -35,6 +35,8 @@ private slots:
     void on_buttonShell_clicked();
 
 
+    void on_actionNowy_triggered();
+
 private:
     Ui::MainWindow *ui;
     QString fileName;

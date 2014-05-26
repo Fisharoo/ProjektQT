@@ -15,6 +15,9 @@ MainWindow::MainWindow(QWidget *parent) :
     ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
+    ui->quickLCD->display("00:00:00.000");
+    ui->bubbleLCD->display("00:00:00.000");
+    ui->shellLCD->display("00:00:00.000");
 }
 
 MainWindow::~MainWindow()
@@ -114,3 +117,12 @@ void MainWindow::on_buttonShell_clicked()
     ui->shellLCD->display(getTime(timer.elapsed()));
 }
 
+
+void MainWindow::on_actionNowy_triggered()
+{
+    ui->toSort->clear();
+    ui->Sorted->clear();
+    ui->quickLCD->display("00:00:00.000");
+    ui->bubbleLCD->display("00:00:00.000");
+    ui->shellLCD->display("00:00:00.000");
+}
