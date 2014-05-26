@@ -93,7 +93,7 @@ void MainWindow::on_buttonQuick_clicked()
         ui->Sorted->setPlainText(quick.listToString(temp));
         ui->quickLCD->display(getTime(timer.elapsed()));
     } else {
-        QMessageBox::warning(this,"Błąd","Brak tekstu do sortowania!");
+        QMessageBox::warning(this,"Błąd","Brak ciągu do sortowania!");
     }
 }
 
@@ -108,7 +108,7 @@ void MainWindow::on_buttonBubble_clicked()
         ui->Sorted->setPlainText(bubble.listToString(temp));
         ui->bubbleLCD->display(getTime(timer.elapsed()));
     } else {
-        QMessageBox::warning(this,"Błąd","Brak tekstu do sortowania!");
+        QMessageBox::warning(this,"Błąd","Brak ciągu do sortowania!");
     }
 }
 
@@ -123,7 +123,7 @@ void MainWindow::on_buttonShell_clicked()
         ui->Sorted->setPlainText(shell.listToString(temp));
         ui->shellLCD->display(getTime(timer.elapsed()));
     } else {
-        QMessageBox::warning(this,"Błąd","Brak tekstu do sortowania!");
+        QMessageBox::warning(this,"Błąd","Brak ciągu do sortowania!");
     }
 }
 

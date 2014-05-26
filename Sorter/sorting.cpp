@@ -12,7 +12,7 @@ QList<double> sorting::getSequence(){
 QList<double> sorting::createList(QString input){
     QString temp;
     QList<double> sequence;
-    for(int i = 0; i<input.length(); i++){
+    for(int i = 0; i < input.length(); i++){
         if(input.at(i).isNumber()){
             temp += input.at(i);
         }
