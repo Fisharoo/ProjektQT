@@ -17,12 +17,14 @@ SOURCES += main.cpp\
     sorting.cpp \
     quicksort.cpp \
     bubblesort.cpp \
-    shellsort.cpp
+    shellsort.cpp \
+    heapsort.cpp
 
 HEADERS  += mainwindow.h \
     sorting.h \
     quicksort.h \
     bubblesort.h \
-    shellsort.h
+    shellsort.h \
+    heapsort.h
 
 FORMS    += mainwindow.ui

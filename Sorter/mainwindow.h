@@ -6,6 +6,7 @@
 #include <quicksort.h>
 #include <bubblesort.h>
 #include <shellsort.h>
+#include <heapsort.h>
 
 namespace Ui {
 class MainWindow;
@@ -37,12 +38,15 @@ private slots:
 
     void on_actionNowy_triggered();
 
+    void on_buttonHeap_clicked();
+
 private:
     Ui::MainWindow *ui;
     QString fileName;
     QuickSort quick;
     BubbleSort bubble;
     ShellSort shell;
+    HeapSort heap;
     QString getTime(int);
 };
 

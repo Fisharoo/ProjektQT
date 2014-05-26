@@ -16,6 +16,7 @@ MainWindow::MainWindow(QWidget *parent) :
     ui->quickLCD->display("00:00:00.000");
     ui->bubbleLCD->display("00:00:00.000");
     ui->shellLCD->display("00:00:00.000");
+    ui->heapLCD->display("00:00:00.000");
 }
 
 MainWindow::~MainWindow()
@@ -46,7 +47,10 @@ void MainWindow::on_actionO_algorytmach_triggered()
                              "Algorytm sortowania działający w miejscu i korzystający <br>"
                              "z porównań elementów. Stanowi uogólnienie sortowania przez "
                              "wstawianie, dopuszczające porównania i zamiany elementów "
-                             "położonych daleko od siebie. Jego pierwszą wersję opublikował w 1959 roku Donald Shell.");
+                             "położonych daleko od siebie. Jego pierwszą wersję opublikował w 1959 roku Donald Shell.<br><br>"
+                             "<b>Sortowanie przez kopcowanie (ang. heapsort) :(</b><br><br>"
+                             "Jeden z algorytmów sortowania, choć niestabilny, to jednak szybki i niepochłaniający wiele pamięci. Jest on w praktyce <br>"
+                             "z reguły nieco wolniejszy od sortowania szybkiego, lecz ma lepszą pesymistyczną złożoność czasową.");
 }
 
 void MainWindow::on_actionOtworz_triggered()
@@ -127,6 +131,20 @@ void MainWindow::on_buttonShell_clicked()
     }
 }
 
+void MainWindow::on_buttonHeap_clicked()
+{
+    if(!ui->toSort->toPlainText().isEmpty()){
+        QList<double> temp;
+        heap.setSequence(ui->toSort->toPlainText());
+        QTime timer;
+        timer.start();
+        temp = heap.Sort();
+        ui->Sorted->setPlainText(heap.listToString(temp));
+        ui->heapLCD->display(getTime(timer.elapsed()));
+    } else {
+        QMessageBox::warning(this,"Błąd","Brak ciągu do sortowania!");
+    }
+}
 
 void MainWindow::on_actionNowy_triggered()
 {
@@ -135,4 +153,5 @@ void MainWindow::on_actionNowy_triggered()
     ui->quickLCD->display("00:00:00.000");
     ui->bubbleLCD->display("00:00:00.000");
     ui->shellLCD->display("00:00:00.000");
+    ui->heapLCD->display("00:00:00.000");
 }
