@@ -7,8 +7,6 @@
 #include <QList>
 #include <QTime>
 #include <QString>
-#include <QStringBuilder>
-
 
 MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
@@ -86,35 +84,47 @@ QString MainWindow::getTime(int ms){
 
 void MainWindow::on_buttonQuick_clicked()
 {
-    QList<double> temp;
-    quick.setSequence(ui->toSort->toPlainText());
-    QTime timer;
-    timer.start();
-    temp = quick.Sort();
-    ui->Sorted->setPlainText(quick.listToString(temp));
-    ui->quickLCD->display(getTime(timer.elapsed()));
+    if(!ui->toSort->toPlainText().isEmpty()){
+        QList<double> temp;
+        quick.setSequence(ui->toSort->toPlainText());
+        QTime timer;
+        timer.start();
+        temp = quick.Sort();
+        ui->Sorted->setPlainText(quick.listToString(temp));
+        ui->quickLCD->display(getTime(timer.elapsed()));
+    } else {
+        QMessageBox::warning(this,"Błąd","Brak tekstu do sortowania!");
+    }
 }
 
 void MainWindow::on_buttonBubble_clicked()
 {
-    QList<double> temp;
-    bubble.setSequence(ui->toSort->toPlainText());
-    QTime timer;
-    timer.start();
-    temp = bubble.Sort();
-    ui->Sorted->setPlainText(bubble.listToString(temp));
-    ui->bubbleLCD->display(getTime(timer.elapsed()));
+    if(!ui->toSort->toPlainText().isEmpty()){
+        QList<double> temp;
+        bubble.setSequence(ui->toSort->toPlainText());
+        QTime timer;
+        timer.start();
+        temp = bubble.Sort();
+        ui->Sorted->setPlainText(bubble.listToString(temp));
+        ui->bubbleLCD->display(getTime(timer.elapsed()));
+    } else {
+        QMessageBox::warning(this,"Błąd","Brak tekstu do sortowania!");
+    }
 }
 
 void MainWindow::on_buttonShell_clicked()
 {
-    QList<double> temp;
-    shell.setSequence(ui->toSort->toPlainText());
-    QTime timer;
-    timer.start();
-    temp = shell.Sort();
-    ui->Sorted->setPlainText(shell.listToString(temp));
-    ui->shellLCD->display(getTime(timer.elapsed()));
+    if(!ui->toSort->toPlainText().isEmpty()){
+        QList<double> temp;
+        shell.setSequence(ui->toSort->toPlainText());
+        QTime timer;
+        timer.start();
+        temp = shell.Sort();
+        ui->Sorted->setPlainText(shell.listToString(temp));
+        ui->shellLCD->display(getTime(timer.elapsed()));
+    } else {
+        QMessageBox::warning(this,"Błąd","Brak tekstu do sortowania!");
+    }
 }
 
 
